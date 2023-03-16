@@ -1,7 +1,8 @@
 // Imports packagens
 import express from 'express';
-// Import
+// Import files
 import homeRouter from './routes/home.js';
+import productRouter from './routes/product.js';
 import Connection from './database/MongoDB/connection.js';
 
 Connection();
@@ -19,6 +20,7 @@ class App {
 
   routes() {
     this.app.use('/', homeRouter);
+    this.app.use('/products/', productRouter);
   }
 }
 

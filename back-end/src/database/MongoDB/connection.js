@@ -1,11 +1,14 @@
-import moongose from 'moongose';
-
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 
 dotenv.config();
 
-export default function Connection() {
-  mongoose.set('strictQuery', true);
-  return mongoose.createConnection(process.env.ConnectionUrl);
+export default async function Connection() {
+  try {
+    const connection = await mongoose.connect(process.env.ConnectionUrl)
+      .then(() => console.log('Conexao com o banco de dados completa'))
+      .catch((e) => console.log(e));
+  } catch (error) {
+    console.log(error);
+  }
 }

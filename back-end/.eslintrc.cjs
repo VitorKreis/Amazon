@@ -15,8 +15,9 @@ module.exports = {
     'class-methods-use-this': 0,
     'import/no-extraneous-dependencies': 0,
     'import/extensions': 0,
-    'import/no-named-as-default': 0,
-    'import/no-named-as-default-member': 0,
     'no-unused-vars': 0,
+    'no-console': 0,
+    'new-cap': 0,
+    'no-restricted-globals': 0,
   },
 };
