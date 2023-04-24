@@ -1,18 +1,16 @@
 import express from 'express';
+import env from 'dotenv';
+
+env.config();
 
 // Imports Files
 import homeRouter from './routes/homeRouter';
 import productRouter from './routes/productRouter';
 
-// Connectin MongoDB
-import Connect from './database/DataBase';
-
-Connect();
+// Config Database
+import './database';
 
 class App {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  app : any;
-
   constructor() {
     this.app = express();
     this.Middlewares();
@@ -26,7 +24,7 @@ class App {
 
   Routes() {
     this.app.use('/', homeRouter);
-    this.app.use('/product/', productRouter);
+    this.app.use('/products', productRouter);
   }
 }
 
