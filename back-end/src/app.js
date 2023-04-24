@@ -6,6 +6,7 @@ env.config();
 // Imports Files
 import homeRouter from './routes/homeRouter';
 import productRouter from './routes/productRouter';
+import PhotoRouter from './routes/photoRouter';
 
 // Config Database
 import './database';
@@ -25,6 +26,7 @@ class App {
   Routes() {
     this.app.use('/', homeRouter);
     this.app.use('/products', productRouter);
+    this.app.use('/pictures/', PhotoRouter);
   }
 }
 
