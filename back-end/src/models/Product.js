@@ -33,4 +33,8 @@ export default class Product extends Model {
     }, { sequelize });
     return this;
   }
+
+  static associate(models) {
+    this.hasMany(models.Picture, { foreignKey: 'product_id' });
+  }
 }
