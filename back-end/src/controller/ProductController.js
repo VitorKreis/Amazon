@@ -8,6 +8,7 @@ class ProductController {
         attributes: ['id', 'name', 'description', 'price'],
         include: {
           model: Picture,
+          attributes: ['id', 'originalname'],
         },
       });
       return res.json({ products });
@@ -24,10 +25,17 @@ class ProductController {
       if (!id) {
         return res.status(404).json('id invalid');
       }
-      const products = await Product.findByPk(id);
+      const products = await Product.findByPk(id, {
+        attributes: ['id', 'name', 'description', 'price'],
+        include: {
+          model: Picture,
+          attributes: ['id', 'originalname'],
+        },
+      });
       if (!products) {
         return res.status(404).json('Product does not exist');
       }
+
       return res.json({ products });
     } catch (e) {
       return res.status(404).json({
