@@ -15,6 +15,7 @@
         "import/first" : "off",
         "class-methods-use-this" : "off",
         "import/no-extraneous-dependencies" : "off",
-        "camelcase" : "off"
+        "camelcase" : "off",
+        "no-param-reassign": "off",
     }
 }
