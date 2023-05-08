@@ -16,6 +16,6 @@
         "class-methods-use-this" : "off",
         "import/no-extraneous-dependencies" : "off",
         "camelcase" : "off",
-        "no-param-reassign": "off",
+        "no-param-reassign": "off"
     }
 }
