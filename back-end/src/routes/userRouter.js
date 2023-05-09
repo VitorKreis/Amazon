@@ -1,12 +1,11 @@
-import Router from 'express'
-import User from '../controller/UserController'
+import Router from 'express';
+import User from '../controller/UserController';
 
 const router = Router();
 
 router.get('/', User.index);
 
 router.get('/:id', User.show);
-
 
 router.post('/', User.store);
 

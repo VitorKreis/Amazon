@@ -1,3 +1,4 @@
+import jwt from 'jsonwebtoken';
 import User from '../models/User';
 
 class LoginController {
@@ -15,11 +16,11 @@ class LoginController {
 
       const { id } = user;
 
-      req.session.user = {
-        id,
-        email,
-      };
-      return req.session.save(() => res.redirect(`/users/${id}`));
+      const token = jwt.sign({ id, email }, process.env.Secret, {
+        expiresIn: process.env.Time,
+      });
+
+      return res.json({ token });
     } catch (e) {
       return res.status(400).json({
         error: e.message,

@@ -1,11 +1,41 @@
-exports.userRequired = async (req, res, next) => {
-  if (!req.session.user) {
-    res.status(400).json({
-      error: 'Please log in your account or create a account ',
+import jwt from 'jsonwebtoken';
+import User from '../models/User';
+
+export default async (req, res, next) => {
+  const { authorization } = req.headers;
+
+  if (!authorization) {
+    return res.status(401).json({
+      errors: ['User is not login!'],
     });
-    req.session.save(() => res.redirect('/login'));
-    return;
   }
 
-  next();
+  const [, token] = authorization.split(' ');
+
+  try {
+    const dados = jwt.verify(token, process.env.Secret);
+
+    const { id, email } = dados;
+    const user = await User.findOne({
+      where: {
+        email,
+      },
+    });
+
+    if (!user) {
+      return res.status(401).json({
+        errors: ['User is not valid'],
+      });
+    }
+
+    req.id = id;
+
+    req.email = email;
+
+    return next();
+  } catch (error) {
+    return res.status(401).json({
+      errors: ['Token expired necessary enter in your account'],
+    });
+  }
 };
