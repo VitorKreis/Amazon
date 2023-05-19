@@ -18,6 +18,11 @@
     ],
     "rules": {
         "react/react-in-jsx-scope": "off",
-        "no-undef": "off"
+        "no-undef": "off",
+        "linebreak-style":"off",
+        "no-plusplus" : "off",
+        "import/no-extraneous-dependencies": "off",
+        "react/style-prop-object": "off",
+        "react/no-unescaped-entities" : "off"
     }
 }
