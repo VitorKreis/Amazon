@@ -1,0 +1,81 @@
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    position: relative;
+}
+
+.card{
+    display: flex;
+    width: 20%;
+    margin: 1em;
+    padding: 0.45em;
+    justify-content: space-around;
+    box-shadow: 7px 7px 7px #A8A8B3;
+}
+
+.card p{
+    font-size: 10px;
+    margin: 2px;
+}
+
+.card-title{
+    border: 0.7px solid #7a7a7a;
+    border-radius: 5px;
+    padding: 0.2em;
+    background-color: #e3e6e6;
+    font-size: 20px;
+}
+
+.card-text{
+    border: 0.2px solid #7a7a7a;
+    border-radius: 5px;
+    padding: 0.2em;
+    margin: 2px;
+    width: 100%;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 72%;
+    padding: 0.5em;
+    margin: 7px 27px 7px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ffd814;
+    color: #ffffff;
+    box-shadow: 7px 7px 7px #A8A8B3;
+    transition: 0.4s;
+}
+
+.button:hover{
+    background-color: #ffd814;
+    opacity: 0.86;
+    color: #ffffff;
+}
+
+
+.new-account{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 98%;
+    padding: 0.5em;
+}
+
+
+.new-account button{
+    background-color: #152c5b;
+    margin: 9em;
+    padding: 0.5em;
+    width: 22%;
+    border: none;
+    border-radius: 7px;
+}
+
+
