@@ -14,7 +14,7 @@ function Navbar() {
             <input className="search" type="text" placeholder="Search" />
         <ul className="list">
           <div className="dropdown">
-            <button id="button" className="btn btn dropdown-toggle" type="button" data-bs-toggle="dropdown">Hello,do login in your account</button>
+            <button id="button" className="btn btn dropdown-toggle" type="button" data-bs-toggle="dropdown">Hello, do login in your account</button>
             <ul className="dropdown-menu">
               <li><p className="dropdown-item">Config</p></li>
               <li><p className="dropdown-item">About</p></li>

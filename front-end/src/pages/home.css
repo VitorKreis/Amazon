@@ -28,6 +28,7 @@
     border: 2px solid #7a7a7a;
     border-radius: 5px;
     width: 100%;
+    height: auto;
     display: none;
     margin: 20px;  
     padding: 2px;
@@ -42,14 +43,35 @@
 }
 
 .card-img-top{
-        background-color: #e3e6e6;
+        background-color: #ffffff;
         text-align: center;
-        border-radius: 3px;
+        border-radius: 1px;
         border: none;
-        padding: 5px;
+        width: 150px;
+        height: 150px;
         margin-bottom: 0.4em;
-        font-size: 1.5em;
-        font-weight: bold;
+}
+
+.card-body{
+    text-align: start;
+    padding: 1px;
+    margin: 1px;
+    justify-content: space-around;
+}
+
+.card-body span{
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.card-img-top img{
+    display: flex;
+    position: relative;
+    float: inline-start;
+    object-fit: contain;
+    margin: 0;
+    width: 150px;
+    height: 150px;
 }
 
 
