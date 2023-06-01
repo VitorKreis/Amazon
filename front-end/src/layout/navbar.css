@@ -9,7 +9,7 @@
 .nav{
     display: flex;
     width: 100%;
-    background-color: #152c5b;
+    background-color: #232f3e;
     box-shadow: 6px 6px 6px #A8A8B3;
 }
 
@@ -51,8 +51,8 @@
 }
 
 .icon-button{
-    background-color: #152c5b;
-    border-color: #152c5b;
+    background-color: #232f3e;
+    border-color: #232f3e;
     padding: .43em
 }
 
@@ -85,7 +85,7 @@
 }
 
 .button-cart{
-    border-color:  #152c5b;
+    border-color:  #232f3e;
 }
 
 
@@ -95,9 +95,9 @@
 
 
 #button{
-    background-color: #152c5b;
+    background-color: #232f3e;
     color: #ffffff;
-    border-color: #152c5b;
+    border-color: #232f3e;
     margin: 0.1em;    
     font-size: 16px;
 }
@@ -107,7 +107,6 @@
 }
 
 #itens{
-
     background-color: #f8fbfe;
     color: #ffffff;
 

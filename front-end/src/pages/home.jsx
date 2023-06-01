@@ -28,6 +28,8 @@ function Home() {
           <p>
             Price:<span>R$4.500</span>
           </p>
+          <button className="buy" type="button">Buy</button>
+          <button className="add_cart" type="button">Add to cart</button>
         </div>
        </div>
        <div className="card">
@@ -42,26 +44,35 @@ function Home() {
         </div>
        </div>
        <div className="card">
-        <h1 className="card-img-top">Img iphone</h1>
+        <h1 className="card-img-top"><img src="https://www.jbl.com.br/on/demandware.static/-/Sites-JB-BR-Library/default/dw5f856f6a/glp/fones-de-ouvido/images/fone-de-ouvido-jbl-tune-510BT-2.png" alt="Fone de ouvido JBL" /></h1>
         <div className="card-body">
+        <p>
+            Name:<span>Fone de Ouvido JBL</span>
+        </p>
           <p>
-            <span>Iphone 12 plus</span>
+            Price:<span>R$200</span>
           </p>
         </div>
        </div>
        <div className="card">
-        <h1 className="card-img-top">Img Iphone</h1>
+        <h1 className="card-img-top"><img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/decf1bf1-17fc-4ffd-9f1b-b59039d2ce92.__CR0,0,970,600_PT0_SX970_V1___.png" alt="MacBook" /></h1>
         <div className="card-body">
+        <p>
+            Name:<span>Mac Book Air</span>
+        </p>
           <p>
-            <span>Iphone 12 plus</span>
+            Price:<span>R$10.000</span>
           </p>
         </div>
        </div>
        <div className="card">
-        <h1 className="card-img-top">Img iphone</h1>
+        <h1 className="card-img-top"><img src="https://m.media-amazon.com/images/I/71PXaTrJZQL._AC_UF350,350_QL80_.jpg" alt="Notebook Lenovo Gamer" /></h1>
         <div className="card-body">
+        <p>
+            Name:<span>Notebook Lenovo Gamer</span>
+        </p>
           <p>
-            <span>Iphone 12 plus</span>
+            Price:<span>R$6.550</span>
           </p>
         </div>
        </div>

@@ -33,10 +33,11 @@
 .card-text{
     border: 0.2px solid #7a7a7a;
     border-radius: 5px;
-    padding: 0.2em;
-    margin: 2px;
-    width: 100%;
+    padding: 2px;
+    margin: 5px 10px;
+    width: 230px; 
 }
+
 
 .button{
     display: flex;

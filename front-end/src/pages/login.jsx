@@ -5,12 +5,10 @@ function Login() {
     <>
     <div className="login">
         <form className="card">
-            <div className="">
-            <h4 className="card-title">E-mail:</h4>
+            <div>
             <input className="card-text" name="email" type="email" placeholder="teste@gmail.com" />
             </div>
-          <div className="">
-            <h4 className="card-title">Password:</h4>
+          <div>
           <input className="card-text" name="password" type="password" placeholder="*******" />
           </div>
           <button className="button btn" type="submit">Login</button>
