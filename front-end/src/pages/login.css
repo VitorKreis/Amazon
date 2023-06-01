@@ -4,40 +4,47 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 95%;
+    width: 100%;
     position: relative;
 }
 
 .card{
     display: flex;
-    width: 20%;
-    margin: 1em;
-    padding: 0.45em;
     justify-content: space-around;
-    box-shadow: 7px 7px 7px #A8A8B3;
+    flex-direction: column;
+    width: 365px;
+    margin: 1em;
+    padding: 19px;
+    border: 1px solid #e7e7e7;
+}
+
+.card h1{
+    font-size: 30px;
+    padding: 1px;
+    color: #0f1111;
 }
 
 .card p{
-    font-size: 10px;
-    margin: 2px;
-}
-
-.card-title{
-    border: 0.7px solid #7a7a7a;
-    border-radius: 5px;
-    padding: 0.2em;
-    background-color: #e3e6e6;
-    font-size: 20px;
+    font-size: 13px;
+    margin: 1px;
+    padding: 1.5px;
+    align-items: center;
+    color:#111111;
 }
 
 .card-text{
-    border: 0.2px solid #7a7a7a;
+    border: 1px solid #f3f3f3;
     border-radius: 5px;
-    padding: 2px;
-    margin: 5px 10px;
-    width: 230px; 
+    padding: 5px;
+    font-size: 15px;
+    margin: 13px 1px 0px;
+    width: 300px;
+    height: 28px; 
 }
 
+::placeholder{
+    color: #000000;
+}
 
 .button{
     display: flex;
@@ -50,8 +57,8 @@
     border-radius: 20px;
     background-color: #ffd814;
     color: #ffffff;
-    box-shadow: 7px 7px 7px #A8A8B3;
-    transition: 0.4s;
+    box-shadow: 5px 5px 5px #c5c9c9;
+    transition: 0.3s;
 }
 
 .button:hover{
@@ -65,18 +72,26 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    width: 98%;
+    position: relative;
+    width: 100%;
     padding: 0.5em;
 }
 
 
 .new-account button{
-    background-color: #152c5b;
-    margin: 9em;
-    padding: 0.5em;
-    width: 22%;
-    border: none;
+    background-color: #f8fbfe;
+    margin-top: 100px;
+    padding: 12px;
+    width: 25%;
+    border: 1.9px solid #e8f0fe;
+    box-shadow: 1px 1px 1px #e8f0fe;
     border-radius: 7px;
+    transition: 0.2s;
+}
+
+.new-account button:hover{
+    background-color: #f3f3f3;
+
 }
 
 

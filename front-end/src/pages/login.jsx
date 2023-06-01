@@ -5,6 +5,7 @@ function Login() {
     <>
     <div className="login">
         <form className="card">
+            <h1>Fazer Login</h1>
             <div>
             <input className="card-text" name="email" type="email" placeholder="teste@gmail.com" />
             </div>
@@ -23,7 +24,7 @@ function Login() {
         </form>
     </div>
       <div className="new-account">
-        <button type="button">Create Account</button>
+        <button type="button">Create your account from DarkCode</button>
       </div>
     </>
 
