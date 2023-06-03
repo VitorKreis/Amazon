@@ -23,7 +23,8 @@
     position: fixed;
     justify-content: space-between;
     flex-wrap:  nowrap;
-    margin: 45px 90px 0px 0px;
+    width: 100%;
+    margin: 45px 10px 100px;
 }
 
 .card{
@@ -74,3 +75,32 @@
 }
 
 
+.buy{
+    display: flex;
+    background-color: #ffd814;
+    margin: 10px;
+    padding: 2px 15px;   
+    border: 0;
+    border-radius: 5px;
+    justify-content: space-around;
+    box-shadow: 2px 2px 2px #333333;
+}
+.buy:hover{
+    box-shadow: 1px 1px 1px #555555;
+}
+
+
+.add_cart{
+    display: flex;
+    background-color: #ffd814;
+    margin: 12px;
+    padding: 2px 15px;
+    justify-content: space-around;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #333333;
+}
+
+.add_cart:hover{
+    box-shadow: 1px 1px 1px #555555;
+}

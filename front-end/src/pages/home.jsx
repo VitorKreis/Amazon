@@ -17,6 +17,8 @@ function Home() {
           <p>
             Price:<span>R$5.500</span>
           </p>
+          <button className="buy" type="button">Buy</button>
+          <button className="add_cart" type="button">Add to cart</button>
         </div>
        </div>
        <div className="card">
@@ -41,6 +43,8 @@ function Home() {
           <p>
             Price:<span>R$2.500</span>
           </p>
+          <button className="buy" type="button">Buy</button>
+          <button className="add_cart" type="button">Add to cart</button>
         </div>
        </div>
        <div className="card">
@@ -52,6 +56,8 @@ function Home() {
           <p>
             Price:<span>R$200</span>
           </p>
+          <button className="buy" type="button">Buy</button>
+          <button className="add_cart" type="button">Add to cart</button>
         </div>
        </div>
        <div className="card">
@@ -63,6 +69,8 @@ function Home() {
           <p>
             Price:<span>R$10.000</span>
           </p>
+          <button className="buy" type="button">Buy</button>
+          <button className="add_cart" type="button">Add to cart</button>
         </div>
        </div>
        <div className="card">
@@ -74,6 +82,8 @@ function Home() {
           <p>
             Price:<span>R$6.550</span>
           </p>
+          <button className="buy" type="button">Buy</button>
+          <button className="add_cart" type="button">Add to cart</button>
         </div>
        </div>
         </section>
