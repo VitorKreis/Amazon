@@ -1,39 +1,39 @@
 .container{
     display: flex;
-    margin-top: 30px;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
-    position:  relative;
+    position: fixed;
 }
 
-.title {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: 1px;
-    padding: 2px;
-    width: 50%;
-    background-color: #e3e6e6;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px 2px #7a7a7a;
-}
 .section{
     display: flex;
-    position: fixed;
-    justify-content: space-between;
-    flex-wrap:  nowrap;
     width: 100%;
-    margin: 45px 10px 100px;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 80px;
+    text-align: center;
+    align-items: center;
+}
+
+.card-section{
+    display:flex;
+    width: 120%;
+    align-items: center;
+    position: relative;
+    box-shadow: 2px 2px 2px 2px#7a7a7a;
+    border: 0;
+    border-radius: 20px;
 }
 
 .card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     border: 2px solid #7a7a7a;
     border-radius: 6px;
-    width: 100%;
+    width: 120%;
     justify-content: space-around;
     position: relative;
-    display: flex;
     box-shadow: 2px 2px 2px 2px #7a7a7a;   
 }
 
@@ -47,9 +47,9 @@
         text-align: center;
         border-radius: 1px;
         border: none;
-        width: 130px;
-        height: 150px;
-        margin-bottom: 0.4em;
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
 }
 
 .card-body{
@@ -69,8 +69,7 @@
     position: relative;
     float: inline-start;
     object-fit: contain;
-    margin: 0;
-    width: 130px;
+    width: 129px;
     height: 150px;
 }
 
