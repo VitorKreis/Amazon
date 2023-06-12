@@ -2,36 +2,34 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: fixed;
 }
 
 .section{
     display: flex;
-    width: 100%;
     position: relative;
-    justify-content: space-between;
-    margin-top: 80px;
-    text-align: center;
-    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
 }
 
 .card-section{
     display:flex;
-    width: 120%;
-    align-items: center;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
     position: relative;
-    box-shadow: 2px 2px 2px 2px#7a7a7a;
-    border: 0;
+    box-shadow: 6px 6Px 6px 5px#7a7a7a;
     border-radius: 20px;
+    margin: 10px;
 }
 
 .card{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    flex-wrap: wrap;
     border: 2px solid #7a7a7a;
     border-radius: 6px;
-    width: 120%;
+    width: 170px;
+    margin: 25px;
     justify-content: space-around;
     position: relative;
     box-shadow: 2px 2px 2px 2px #7a7a7a;   
@@ -48,19 +46,19 @@
         border-radius: 1px;
         border: none;
         width: 120px;
-        height: 120px;
+        height: 130px;
+        object-fit: contain;
         margin-bottom: 15px;
 }
 
 .card-body{
     text-align: start;
     padding: 1px;
-    margin: 1px;
     justify-content: space-around;
 }
 
 .card-body span{
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
 }
 
@@ -68,8 +66,8 @@
     display: flex;
     position: relative;
     float: inline-start;
-    object-fit: contain;
-    width: 129px;
+    
+    width: 150px;
     height: 150px;
 }
 
@@ -77,8 +75,8 @@
 .buy{
     display: flex;
     background-color: #ffd814;
-    margin: 10px;
-    padding: 2px 15px;   
+    margin: 9px;
+    padding: 2px 15px ;   
     border: 0;
     border-radius: 5px;
     justify-content: space-around;
@@ -92,7 +90,7 @@
 .add_cart{
     display: flex;
     background-color: #ffd814;
-    margin: 12px;
+    margin: 10px;
     padding: 2px 15px;
     justify-content: space-around;
     border: 0;
