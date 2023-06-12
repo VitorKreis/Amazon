@@ -1,25 +1,23 @@
 .container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .section{
     display: flex;
     position: relative;
     justify-content: center;
-    margin-top: 40px;
 }
 
 .card-section{
     display:flex;
-    margin: 0;
     padding: 0;
     justify-content: space-between;
     position: relative;
-    box-shadow: 6px 6Px 6px 5px#7a7a7a;
+    box-shadow: 2px 2px 2px 2px#7a7a7a;
     border-radius: 20px;
-    margin: 10px;
+    margin: 20px 0px;
 }
 
 .card{
@@ -28,7 +26,7 @@
     flex-wrap: wrap;
     border: 2px solid #7a7a7a;
     border-radius: 6px;
-    width: 170px;
+    width: 160px;
     margin: 25px;
     justify-content: space-around;
     position: relative;
@@ -66,17 +64,15 @@
     display: flex;
     position: relative;
     float: inline-start;
-    
     width: 150px;
     height: 150px;
 }
-
 
 .buy{
     display: flex;
     background-color: #ffd814;
     margin: 9px;
-    padding: 2px 15px ;   
+    padding: 1px 15px ;   
     border: 0;
     border-radius: 5px;
     justify-content: space-around;

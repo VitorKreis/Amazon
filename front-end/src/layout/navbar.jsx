@@ -19,7 +19,7 @@ function Navbar() {
               <li><p className="dropdown-item">Config</p></li>
               <li><p className="dropdown-item">About</p></li>
               <li><p className="dropdown-item">Contact</p></li>
-              {isLoggedIn ? <li><p className="dropdown-item">You</p></li> : <li><p className="dropdown-item"><Link to="/login">Login</Link></p></li>}
+              {isLoggedIn ? <li><p className="dropdown-item">You</p></li> : <li><Link className="dropdown-item" to="/login">Login</Link></li>}
             </ul>
           </div>
           <li className="item">
