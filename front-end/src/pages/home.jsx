@@ -6,6 +6,7 @@ import React from 'react';
 function Home() {
   return (
     <div className="container">
+    <h2>More Liked</h2>
     <section className="section">
        <div className="card-section">
         <div className="card">
@@ -88,6 +89,7 @@ function Home() {
        </div>
        </div>
     </section>
+    <h2>Most see</h2>
     <section className="section">
        <div className="card-section">
         <div className="card">
@@ -170,7 +172,7 @@ function Home() {
        </div>
        </div>
     </section>
-
+    <h2>New in DarkCode</h2>
     <section className="section">
        <div className="card-section">
         <div className="card">

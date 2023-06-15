@@ -28,7 +28,6 @@
     flex-direction: column;
     flex-wrap: wrap;
     position: relative;
-    border: 2px solid #7a7a7a;
     border-radius: 6px;
     width: 185px;
     justify-content: space-around;
@@ -36,6 +35,10 @@
     margin: 1px 6px;
 }
 
+.card:hover{
+    transition: 0.3s;
+    box-shadow: 1px 1px 1px 1px #A8A8B3;
+}
 
 
 .card-img-top{
