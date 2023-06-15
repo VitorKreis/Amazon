@@ -170,6 +170,7 @@ function Home() {
        </div>
        </div>
     </section>
+
     <section className="section">
        <div className="card-section">
         <div className="card">
