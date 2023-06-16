@@ -63,8 +63,8 @@
 
 .button:hover{
     background-color: #FEBD69;
-    opacity: 0.90;
     color: #ffffff;
+    box-shadow: 1px 1px 1px #c5c9c9;
 }
 
 
@@ -73,24 +73,28 @@
     justify-content: center;
     flex-direction: row;
     position: relative;
-    width: 100%;
     margin: 35px 0px;
+    width: 100%;
+    
 }
 
 
-.new-account button{
-    background-color: #f8fbfe;
-    padding: 12px;
-    width: 25%;
-    border: 1.9px solid #e8f0fe;
-    box-shadow: 1px 1px 1px #e8f0fe;
+.new-account a{
+    text-decoration: none;
+    background-color: #FEBD69;
+    color: #ffffff;
+    padding: 9px;
+    box-shadow: 2px 2px 2px 2px #c5c9c9;
     border-radius: 7px;
     transition: 0.2s;
+    text-align: center;
+    width: 420px;
 }
 
-.new-account button:hover{
-    background-color: #f3f3f3;
 
+.new-account a:hover{
+    background-color: #FEBD69;
+    box-shadow: 1px 1px 1px 1px #c5c9c9;
 }
 
 

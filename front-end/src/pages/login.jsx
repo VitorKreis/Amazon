@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './login.css';
 
 function Login() {
@@ -24,7 +25,7 @@ function Login() {
         </form>
     </div>
       <div className="new-account">
-        <button type="button">Create your account from DarkCode</button>
+        <Link to="/NewAccount" type="button">Create your account from DarkCode</Link>
       </div>
     </>
 

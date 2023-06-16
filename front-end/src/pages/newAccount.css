@@ -1,0 +1,60 @@
+.newAccount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+}
+
+
+.card{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 320px;
+    margin: 50px 2px;
+    padding: 19px;
+    border: 1px solid #e7e7e7;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 70%;
+    padding: 0.5em;
+    margin: 7px 27px 7px;
+    border: none;
+    border-radius: 20px;
+    background-color: #FEBD69;
+    color: #ffffff;
+    box-shadow: 5px 5px 5px #c5c9c9;
+    transition: 0.3s;
+}
+
+.card h1{
+    font-size: 30px;
+    padding: 1px;
+    color: #0f1111;
+}
+
+.card p{
+    font-size: 13px;
+    margin: 1px;
+    padding: 1.5px;
+    align-items: center;
+    color:#111111;
+}
+
+.card-text{
+    border: 2px solid #f3f3f338;
+    border-radius: 5px;
+    padding: 9px;
+    font-size: 15px;
+    margin: 13px 1px 0px;
+    width: 320px;
+    height: 30px; 
+}
