@@ -50,11 +50,12 @@
 }
 
 .card-text{
-    border: 2px solid #f3f3f338;
+    border: 0;
     border-radius: 5px;
     padding: 9px;
     font-size: 15px;
     margin: 13px 1px 0px;
     width: 320px;
     height: 30px; 
+    box-shadow: 1px 1px 1px 1px #c5c9c9;
 }

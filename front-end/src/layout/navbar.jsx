@@ -17,8 +17,8 @@ function Navbar() {
             <button id="button" className="btn btn dropdown-toggle" type="button" data-bs-toggle="dropdown">Hello, do login in your account</button>
             <ul className="dropdown-menu">
               <li><p className="dropdown-item">Config</p></li>
-              <li><p className="dropdown-item">About</p></li>
-              <li><p className="dropdown-item">Contact</p></li>
+              <li><p className="dropdown-item">List</p></li>
+              <li><Link to="/about" className="dropdown-item">About</Link></li>
               {isLoggedIn ? <li><p className="dropdown-item">You</p></li> : <li><Link className="dropdown-item" to="/login">Login</Link></li>}
             </ul>
           </div>

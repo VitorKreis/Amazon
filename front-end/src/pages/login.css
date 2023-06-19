@@ -33,13 +33,13 @@
 }
 
 .card-text{
-    border: 1px solid #f3f3f3;
     border-radius: 5px;
     padding: 5px;
     font-size: 15px;
     margin: 13px 1px 0px;
     width: 300px;
-    height: 28px; 
+    height: 28px;
+    box-shadow: 1px 1px 1px 1px #c5c9c9;
 }
 
 ::placeholder{

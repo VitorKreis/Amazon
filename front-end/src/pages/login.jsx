@@ -15,7 +15,7 @@ function Login() {
           </div>
           <button className="button btn" type="submit">Login</button>
           <p>
-          Ao continuar, você concorda com as Condições de Uso da Amazon.
+Ao continuar, você concorda com as Condições de Uso da Amazon.
           </p>
           <p>
  Por favor verifique a Notificação de Privacidade,
