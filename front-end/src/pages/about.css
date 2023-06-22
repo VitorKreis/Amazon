@@ -29,4 +29,11 @@
 }
 
 
+.icons{
+    display: flex;
+    align-items: center;
+    margin: 2px;
+}
+
+
 
