@@ -1,5 +1,6 @@
 import express from 'express';
 import env from 'dotenv';
+import cors from 'cors';
 
 env.config();
 
@@ -23,6 +24,7 @@ class App {
   Middlewares() {
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.json());
+    this.app.use(cors);
   }
 
   Routes() {
