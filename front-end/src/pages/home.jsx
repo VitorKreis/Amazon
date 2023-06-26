@@ -2,20 +2,8 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/jsx-props-no-spreading */
 import './home.css';
-import { useEffect, useState } from 'react';
 
-async function Home() {
-  const [products, setProducts] = useState([]);
-
-  // eslint-disable-next-line no-unused-vars
-  const Products = await useEffect(() => {
-    fetch('http://localhost:3110/products').then((res) => res.json()).then((data) => {
-      setProducts(data);
-    });
-  }, []);
-
-  console.log(products);
-
+function Home() {
   return (
     <div className="container">
     <h2>More Liked</h2>
