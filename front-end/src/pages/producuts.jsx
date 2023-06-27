@@ -7,10 +7,15 @@ function Product() {
     fetch('http://localhost:3110/products').then((res) => res.json()).then((data) => setProducts(data));
   }, []);
 
-  console.log(products.map((product) => product));
+  console.log(products.map((product) => (
+    (product.description.split())
+  )));
 
   return (
-    <h1>Hello World</h1>
+    products.map((product) => (
+      <p>{product.description.split()}</p>
+    ))
+
   );
 }
 
