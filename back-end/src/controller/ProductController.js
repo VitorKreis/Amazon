@@ -11,7 +11,7 @@ class ProductController {
           attributes: ['id', 'originalname'],
         },
       });
-      return res.json(products);
+      return res.json({ products });
     } catch (e) {
       return res.status(404).json({
         error: e.message,
