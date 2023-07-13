@@ -16,6 +16,7 @@
     margin: 50px 2px;
     padding: 19px;
     border: 1px solid #e7e7e7;
+    text-align: center;
 }
 
 .card h1{
@@ -27,7 +28,7 @@
 .card p{
     font-size: 13px;
     margin: 1px;
-    padding: 1.5px;
+    padding: 1px;
     align-items: center;
     color:#111111;
 }

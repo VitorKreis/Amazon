@@ -25,6 +25,7 @@
         "react/style-prop-object": "off",
         "react/no-unescaped-entities" : "off",
         "react/jsx-indent" : "off",
-        "max-len" : "off"
+        "max-len" : "off",
+         "react/prop-types" : 0
      }
 }
