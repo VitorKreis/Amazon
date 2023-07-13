@@ -6,12 +6,13 @@ class ProductController {
     try {
       const products = await Product.findAll({
         attributes: ['id', 'name', 'description', 'price'],
+        order: [['id', 'DESC']],
         include: {
           model: Picture,
           attributes: ['id', 'originalname'],
         },
       });
-      return res.json({ products });
+      return res.json(products);
     } catch (e) {
       return res.status(404).json({
         error: e.message,
