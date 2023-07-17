@@ -13,7 +13,6 @@ class PictureController {
           error: e.code,
         });
       }
-      console.log(req.session.user);
       try {
         const { originalname, filename } = req.file;
 

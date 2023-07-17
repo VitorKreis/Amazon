@@ -9,7 +9,7 @@ class ProductController {
         order: [['id', 'DESC']],
         include: {
           model: Picture,
-          attributes: ['id', 'originalname'],
+          attributes: ['id', 'originalname', 'filename'],
         },
       });
       return res.json(products);

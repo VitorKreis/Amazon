@@ -14,7 +14,7 @@ function about() {
             <a label="GitHub" href="https://github.com/VitorKreis" target="_blank" rel="noreferrer"><AiOutlineGithub /></a>
             <a label="GitHub" href="https://www.instagram.com/vitorkrei/" target="_blank" rel="noreferrer"><AiOutlineInstagram /></a>
             </div>
-            <span>Thanks to se this project</span>
+            <span>Thanks to see this project</span>
         </div>
     </div>
 

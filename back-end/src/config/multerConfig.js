@@ -15,7 +15,7 @@ export default {
       cb(null, resolve(__dirname, '..', '..', 'uploads'));
     }),
     filename: ((req, file, cb) => {
-      cb(null, `${Date.now()}${extname(file.originalname)}`);
+      cb(null, `${resolve(__dirname, '..', '..', 'uploads')}${extname(file.originalname)}`);
     }),
   }),
 };
