@@ -1,19 +1,44 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, Navigate } from 'react-router-dom';
 import './login.css';
+import axios from 'axios';
 
 function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  // eslint-disable-next-line no-unused-vars
+  const [token, Settoken] = useState();
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const user = { email, password };
+
+    try {
+      const response = await axios.post('http://localhost:3110/login', user);
+      Settoken(response.data);
+      localStorage.setItem('user', token);
+    } catch (err) {
+      setError(err.response.data);
+    }
+  }
+
   return (
     <>
     <div className="login">
-        <form className="card">
-            <h1>Fazer Login</h1>
+        <form className="card" onSubmit={handleSubmit}>
             <div>
-            <input className="card-text" name="email" type="email" placeholder="teste@gmail.com" />
+                {localStorage.getItem('user') && (<Navigate to="/" replace />)}
+            </div>
+            <h1>Fazer Login</h1>
+            <div className="error">{error && <p>{error}</p>}</div>
+            <div>
+            <input className="card-text" name="email" type="email" placeholder="teste@gmail.com" value={email} onChange={({ target }) => setEmail(target.value)} />
             </div>
           <div>
-          <input className="card-text" name="password" type="password" placeholder="*******" />
+          <input className="card-text" name="password" type="password" placeholder="*******" value={password} onChange={({ target }) => setPassword(target.value)} />
           </div>
-          <button className="button btn" type="submit">Login</button>
+          <button className="button btn" type="submit" onClick={handleSubmit}>Login</button>
           <p> Ao continuar, você concorda com as Condições de Uso da Amazon.</p>
           <p> Por favor verifique a Notificação de Privacidade, Notificação de Cookies e a Notificação de Anúncios Baseados em Interesse.</p>
 

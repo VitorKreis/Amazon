@@ -3,6 +3,8 @@
 /* eslint-disable react/prop-types */
 import './ProductCard.css';
 
+import imagen from '../uploads/1689790413967.jpg';
+
 function ProjectCard({
   id, name, price, img,
 }) {
@@ -10,13 +12,10 @@ function ProjectCard({
     im.filename
   ));
 
-  // eslint-disable-next-line global-require
-  const imagen = '../uploads/1689790413967.jpg';
-
   return (
         <div className="card-section">
             <div className="card">
-        {img.length > 0 ? <img className="card-img-top" src="../uploads/1689790413967.jpg" alt={name} /> : <p>Don't have imagen</p>}
+        {img.length > 0 ? <img className="card-img-top" src={imagen} alt={name} /> : <p>Don't have imagen</p>}
         <div className="card-body">
           <p>
             <span>{name}</span>

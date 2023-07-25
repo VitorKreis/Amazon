@@ -3,13 +3,14 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import './home.css';
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 import ProjectCard from '../layout/ProductCard';
 
 function Home() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3110/products').then((res) => res.json()).then((data) => setProducts(data));
+    axios.get('http://localhost:3110/products').then(({ data }) => setProducts(data));
   }, []);
   return (
     <div className="container">

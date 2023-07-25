@@ -97,5 +97,27 @@
     background-color: #FEBD69;
     box-shadow: 1px 1px 1px 1px #c5c9c9;
 }
+.error{
+    display: flex;
+    background-color:#FF9494;
+    border: 0;
+    border-radius: 10px;
+    width: 180px;
+    text-align: center;
+    padding: auto;
+    margin: auto;
+}
 
 
+.error p{
+    color: #000000;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.ok{
+    background-color: #e7e7e7;
+    color: #ffffff;
+    
+}
