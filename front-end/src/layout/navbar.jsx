@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 function Navbar() {
   let user = false;
   useEffect(() => {
-    if (localStorage.getItem('user')) {
+    if (localStorage.getItem('token')) {
       user = true;
     }
   });
