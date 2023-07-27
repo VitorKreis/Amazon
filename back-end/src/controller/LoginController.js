@@ -4,6 +4,7 @@ import User from '../models/User';
 class LoginController {
   async login(req, res) {
     try {
+      console.log(req.body);
       const { email, password } = req.body;
 
       if (!email || !password) return res.status(401).json({ error: 'Please check your password and your email' });
