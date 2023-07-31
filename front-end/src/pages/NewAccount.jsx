@@ -11,55 +11,49 @@ function newAccount() {
   const [user, setUser] = useState();
   const [erro, setErro] = useState();
 
-  // eslint-disable-next-line no-shadow
-  function verifyEmail(email) {
+  function verifyEmail(e) {
+    setEmail(e.target.value);
     if (!validator.isEmail(email)) {
-      setErro('please verify your e-mail!');
+      setErro('Please verify your e-mail!');
+    } else {
+      setErro();
     }
     return email;
   }
 
-  // eslint-disable-next-line no-shadow
-  function verifyPassword(password) {
+  function verifyPassword(e) {
+    setPassword(e.target.value);
     if (password.length < 5 || password.length > 50) {
-      setErro('please verify your password!');
+      setErro('Please verify your password!');
     } else {
       setErro();
     }
+
+    return password;
   }
   async function handleSubmit(e) {
     e.preventDefault();
-    setErro();
-
-    verifyEmail(email);
-
-    verifyPassword(password);
-
-    const newUser = { email, password };
 
     try {
+      const newUser = { email, password };
       const res = await axios.post('http://localhost:3110/users/', newUser);
       setUser(res.data);
       localStorage.setItem('user', user);
     } catch (error) {
-      setEmail();
-      setPassword();
       console.log(error);
     }
-
-    console.log(erro);
   }
   return (
     <div className="newAccount">
       {localStorage.getItem('user') && <Navigate to="/login" replace />}
     <form className="card" onSubmit={handleSubmit}>
         <h1>Create you account</h1>
-        { erro ? <span>{erro}</span> : <span />}
+        { erro ? <span className="error">{erro}</span> : <p />}
         <div>
-            <input required className="card-text" name="email" type="email" placeholder="teste@gmail.com" onChange={({ target }) => setEmail(target.value)} />
+            <input required className="card-text" name="email" type="email" placeholder="teste@gmail.com" onChange={verifyEmail} />
         </div>
         <div>
-            <input required className="card-text" name="password" type="password" placeholder="*******" onChange={({ target }) => setPassword(target.value)} />
+            <input required className="card-text" name="password" type="password" placeholder="*******" onChange={verifyPassword} />
         </div>
         <button className="button btn" type="submit" onClick={handleSubmit}>Create your account</button>
     </form>

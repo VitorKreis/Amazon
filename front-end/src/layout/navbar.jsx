@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 /* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import { Link } from 'react-router-dom';
@@ -13,10 +14,12 @@ function Navbar() {
     if (localStorage.getItem('token')) {
       user = true;
     }
-  });
+  }, []);
 
   const handleLogout = () => {
     localStorage.clear();
+    // eslint-disable-next-line no-restricted-globals
+    location.reload();
   };
 
   return (
@@ -30,8 +33,8 @@ function Navbar() {
             <ul className="dropdown-menu">
               <li><p className="dropdown-item">List</p></li>
               <li><Link to="/about" className="dropdown-item">About</Link></li>
-              {user ? <li><p className="dropdown-item">You</p></li> : <li><Link className="dropdown-item" to="/login">Login</Link></li>}
-              <li><button className="dropdown-item" type="button" onClick={handleLogout}>Logout</button></li>
+              {localStorage.getItem('token') ? <li><p className="dropdown-item">You</p></li> : <li><Link className="dropdown-item" to="/login">Login</Link></li>}
+              <li><button className="dropdown-item" type="reset" onClick={handleLogout}>Logout</button></li>
             </ul>
           </div>
           <li className="item">

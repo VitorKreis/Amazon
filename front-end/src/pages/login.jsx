@@ -2,13 +2,35 @@ import { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import './login.css';
 import axios from 'axios';
+import validator from 'validator';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  // const [error, setError] = useState();
+  const [erro, setErro] = useState();
   // eslint-disable-next-line no-unused-vars
   const [token, Settoken] = useState([]);
+
+  function verifyEmail(e) {
+    setEmail(e.target.value);
+    if (!validator.isEmail(email)) {
+      setErro('Please verify your e-mail!');
+    } else {
+      setErro();
+    }
+    return email;
+  }
+
+  function verifyPassword(e) {
+    setPassword(e.target.value);
+    if (password.length < 5 || password.length > 50) {
+      setErro('Please verify your password!');
+    } else {
+      setErro();
+    }
+
+    return password;
+  }
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -32,12 +54,12 @@ function Login() {
                 {localStorage.getItem('token') && (<Navigate to="/" replace />)}
             </div>
             <h1>Fazer Login</h1>
-
+            { erro ? <span className="error">{erro}</span> : <p />}
             <div>
-            <input className="card-text" name="email" type="email" placeholder="teste@gmail.com" value={email} onChange={({ target }) => setEmail(target.value)} />
+            <input className="card-text" name="email" type="email" placeholder="teste@gmail.com" value={email} onChange={verifyEmail} />
             </div>
           <div>
-          <input className="card-text" name="password" type="password" placeholder="*******" value={password} onChange={({ target }) => setPassword(target.value)} />
+          <input className="card-text" name="password" type="password" placeholder="*******" value={password} onChange={verifyPassword} />
           </div>
           <button className="button btn" type="submit" onClick={handleSubmit}>Login</button>
           <p> Ao continuar, você concorda com as Condições de Uso da Amazon.</p>
