@@ -31,9 +31,8 @@ function newAccount() {
 
     return password;
   }
-  async function handleSubmit(e) {
-    e.preventDefault();
-
+  async function handleSubmit(event) {
+    event.preventDefault();
     try {
       const newUser = { email, password };
       const res = await axios.post('http://localhost:3110/users/', newUser);
@@ -50,10 +49,10 @@ function newAccount() {
         <h1>Create you account</h1>
         { erro ? <span className="error">{erro}</span> : <p />}
         <div>
-            <input required className="card-text" name="email" type="email" placeholder="teste@gmail.com" onChange={verifyEmail} />
+            <input required className="card-text" name="email" value={email} type="email" placeholder="teste@gmail.com" onChange={verifyEmail} />
         </div>
         <div>
-            <input required className="card-text" name="password" type="password" placeholder="*******" onChange={verifyPassword} />
+            <input required className="card-text" name="password" value={password} type="password" placeholder="*******" onChange={verifyPassword} />
         </div>
         <button className="button btn" type="submit" onClick={handleSubmit}>Create your account</button>
     </form>

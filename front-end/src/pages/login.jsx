@@ -32,17 +32,17 @@ function Login() {
     return password;
   }
 
+  // eslint-disable-next-line consistent-return
   async function handleSubmit(e) {
     e.preventDefault();
     const user = { email, password };
 
     try {
-      await axios.post('http://localhost:3110/login', user).then((res) => {
-        Settoken(res.data);
-        localStorage.setItem('token', token);
-      });
+      const res = await axios.post('http://localhost:3110/login', user);
+      Settoken(res.data);
+      localStorage.setItem('token', token);
     } catch (err) {
-      console.log(err);
+      if (err.response.data) return setErro(err.response.data);
     }
   }
 

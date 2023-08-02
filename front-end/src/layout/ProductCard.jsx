@@ -1,21 +1,19 @@
 /* eslint-disable no-octal-escape */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
+import { useState } from 'react';
+import Photo from './Photo';
 import './ProductCard.css';
-
-import imagen from '../uploads/1689790413967.jpg';
 
 function ProjectCard({
   id, name, price, img,
 }) {
-  const photo = img.map((im) => (
-    im.filename
-  ));
-
   return (
         <div className="card-section">
+            {img.length > 0 && img.map((picture) => (
+                <Photo className="card-img-top" url={picture.filename} name={picture.originalname} />
+            ))}
             <div className="card">
-        {img.length > 0 ? <img className="card-img-top" src={imagen} alt={name} /> : <p>Don't have imagen</p>}
         <div className="card-body">
           <p>
             <span>{name}</span>
