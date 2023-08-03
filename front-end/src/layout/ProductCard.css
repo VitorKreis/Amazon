@@ -30,10 +30,12 @@
     text-align: center;
     border-radius: 1px;
     border: none;
-    width: 120px;
-    height: 100px;
-    object-fit: contain;
-    margin-bottom: 15px;    
+    width: auto;
+    height: auto;
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
 

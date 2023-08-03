@@ -2,7 +2,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
-import Photo from './Photo';
 import './ProductCard.css';
 
 function ProjectCard({
@@ -10,10 +9,11 @@ function ProjectCard({
 }) {
   return (
         <div className="card-section">
-            {img.length > 0 && img.map((picture) => (
-                <Photo className="card-img-top" url={picture.filename} name={picture.originalname} />
-            ))}
             <div className="card">
+            {img.length > 0 && img.map((picture) => (
+                // eslint-disable-next-line import/no-dynamic-require, global-require
+                <img className="card-img-top" src={require(`../uploads/${picture.filename}`)} alt={picture.originalname} />
+            ))}
         <div className="card-body">
           <p>
             <span>{name}</span>

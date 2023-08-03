@@ -16,6 +16,11 @@ function Navbar() {
     }
   }, []);
 
+  const reloads = () => {
+    // eslint-disable-next-line no-restricted-globals
+    location.reload();
+  };
+
   const handleLogout = () => {
     localStorage.clear();
     // eslint-disable-next-line no-restricted-globals
@@ -25,7 +30,7 @@ function Navbar() {
   return (
     <div className="Container">
       <nav className="nav navbar">
-        <button className="icon-button btn btn" type="button"><Link className="icon" to="/"><SiGtk /></Link></button>
+        <button className="icon-button btn btn" type="button"><Link className="icon" onClick={reloads} to="/"><SiGtk /></Link></button>
             <input className="search" type="text" placeholder="Search" />
         <ul className="list">
           <div className="dropdown">
