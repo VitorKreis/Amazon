@@ -28,14 +28,13 @@
     display: flex;
     background-color: #ffffff;
     text-align: center;
+    object-fit: contain;
     border-radius: 1px;
     border: none;
     width: auto;
     height: auto;
     max-width: 150px;
     max-height: 150px;
-    object-fit: cover;
-    margin-bottom: 15px;
 }
 
 

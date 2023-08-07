@@ -30,7 +30,7 @@ function Navbar() {
   return (
     <div className="Container">
       <nav className="nav navbar">
-        <button className="icon-button btn btn" type="button"><Link className="icon" onClick={reloads} to="/"><SiGtk /></Link></button>
+        <button className="icon-button btn btn" onClick={reloads} type="button"><Link className="icon" to="/"><SiGtk /></Link></button>
             <input className="search" type="text" placeholder="Search" />
         <ul className="list">
           <div className="dropdown">
@@ -38,7 +38,7 @@ function Navbar() {
             <ul className="dropdown-menu">
               <li><p className="dropdown-item">List</p></li>
               <li><Link to="/about" className="dropdown-item">About</Link></li>
-              {localStorage.getItem('token') ? <li><p className="dropdown-item">You</p></li> : <li><Link className="dropdown-item" to="/login">Login</Link></li>}
+              {localStorage.getItem('token') ? <li><Link className="dropdown-item" to="/You">You</Link></li> : <li><Link className="dropdown-item" to="/login">Login</Link></li>}
               <li><button className="dropdown-item" type="reset" onClick={handleLogout}>Logout</button></li>
             </ul>
           </div>

@@ -5,8 +5,9 @@ import Narbar from './layout/navbar';
 // Pages
 import Home from './pages/home';
 import Login from './pages/login';
-import NewAccount from './pages/NewAccount';
+import NewAccount from './pages/newAccount';
 import About from './pages/about';
+import Account from './pages/Account';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/newAccount" element={<NewAccount />} />
         <Route path="/about" element={<About />} />
+        <Route path="/You" element={<Account />} />
       </Routes>
     </Router>
   );
