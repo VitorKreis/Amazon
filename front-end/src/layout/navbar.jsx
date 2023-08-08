@@ -1,21 +1,11 @@
-/* eslint-disable react/button-has-type */
-/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import { Link } from 'react-router-dom';
 import './navbar.css';
 
 import { SiGtk } from 'react-icons/si';
 import { BsFillCartFill } from 'react-icons/bs';
-import { useEffect } from 'react';
 
 function Navbar() {
-  let user = false;
-  useEffect(() => {
-    if (localStorage.getItem('token')) {
-      user = true;
-    }
-  }, []);
-
   const reloads = () => {
     // eslint-disable-next-line no-restricted-globals
     location.reload();
@@ -39,7 +29,7 @@ function Navbar() {
               <li><p className="dropdown-item">List</p></li>
               <li><Link to="/about" className="dropdown-item">About</Link></li>
               {localStorage.getItem('token') ? <li><Link className="dropdown-item" to="/You">You</Link></li> : <li><Link className="dropdown-item" to="/login">Login</Link></li>}
-              <li><button className="dropdown-item" type="reset" onClick={handleLogout}>Logout</button></li>
+              <li><button className="dropdown-item" type="button" onClick={handleLogout}>Logout</button></li>
             </ul>
           </div>
           <li className="item">

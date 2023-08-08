@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
-import './login.css';
 import axios from 'axios';
 import validator from 'validator';
+
+import './login.css';
 
 function Login() {
   const [email, setEmail] = useState('');

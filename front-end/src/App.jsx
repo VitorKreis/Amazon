@@ -4,10 +4,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Narbar from './layout/navbar';
 // Pages
 import Home from './pages/home';
-import Login from './pages/login';
-import NewAccount from './pages/newAccount';
+import Login from './Login/login';
+import NewAccount from './Login/newAccount';
 import About from './pages/about';
-import Account from './pages/Account';
+import Account from './Login/account';
 
 function App() {
   return (

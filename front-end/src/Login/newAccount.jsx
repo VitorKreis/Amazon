@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './newAccount.css';
-
 import { Navigate } from 'react-router';
 import validator from 'validator';
+
+import './newAccount.css';
 
 function newAccount() {
   const [email, setEmail] = useState('');
