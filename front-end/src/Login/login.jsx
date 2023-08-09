@@ -11,6 +11,7 @@ function Login() {
   const [erro, setErro] = useState();
   // eslint-disable-next-line no-unused-vars
   const [token, Settoken] = useState([]);
+  const [login, setlogin] = useState();
 
   function verifyEmail(e) {
     setEmail(e.target.value);
@@ -37,6 +38,8 @@ function Login() {
   async function handleSubmit(e) {
     e.preventDefault();
     const user = { email, password };
+    setlogin(JSON.stringify(user));
+    localStorage.setItem('user', login);
 
     try {
       const res = await axios.post('http://localhost:3110/login', user);
