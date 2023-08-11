@@ -1,19 +1,23 @@
 import './account.css';
 
+import { Link } from 'react-router-dom';
+
+import { getLocalStorage } from '../LocalStorage';
+
 function Account() {
-  const user = JSON.parse(localStorage.getItem('user'));
+  const user = JSON.parse(getLocalStorage('login'));
   return (
         <div className="container">
             <ul className="list-group">
                 <li className="list-group-item">
                     <h1>Nome:</h1>
                     <p>User</p>
-                    <button className="button-edit" type="button">Editar</button>
+                    <Link to="/editName" className="button-edit" type="button">Editar</Link>
                 </li>
                 <li className="list-group-item">
                     <h1>E-mail</h1>
                     <p>{user.email}</p>
-                    <button className="button-edit" type="button">Editar</button>
+                    <Link to="/editEmail" className="button-edit" type="button">Editar</Link>
                 </li>
                 <li className="list-group-item">
                     <h1>Numero de celular</h1>
@@ -23,7 +27,7 @@ function Account() {
                 <li className="list-group-item">
                     <h1>Password</h1>
                     <p>********</p>
-                    <button className="button-edit" type="button">Editar</button>
+                    <Link to="/editPassword" className="button-edit" type="button">Editar</Link>
                 </li>
                 <li className="list-group-item">
                     <button className="button-logout" type="button">Logout</button>

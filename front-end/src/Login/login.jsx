@@ -4,6 +4,7 @@ import axios from 'axios';
 import validator from 'validator';
 
 import './login.css';
+import { setLocalStorege } from '../LocalStorage';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -39,12 +40,13 @@ function Login() {
     e.preventDefault();
     const user = { email, password };
     setlogin(JSON.stringify(user));
-    localStorage.setItem('user', login);
+
+    setLocalStorege('login', login, 1);
 
     try {
       const res = await axios.post('http://localhost:3110/login', user);
       Settoken(res.data);
-      localStorage.setItem('token', token);
+      setLocalStorege('token', token, 1);
     } catch (err) {
       if (err.response.data) return setErro(err.response.data);
     }

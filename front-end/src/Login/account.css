@@ -7,7 +7,7 @@
     display: flex;
     width: 55%;
     margin: 50px 0px 0px 0px;
-    box-shadow: 1px 1px 1px #f3f3f3;
+    box-shadow: 0.5px 0.5px 0.5px#d5d9d9;
 }
 
 .list-group-item{
@@ -41,7 +41,7 @@
     background-color: #ffffff;
     border: none;
     border-radius: 10px;
-    box-shadow: 1px 1px 1px 1px #f3f3f3;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px #f3f3f3;
     width: 115px;
     margin: 10px;
 }
@@ -52,15 +52,17 @@
     background-color: #ffffff;
     border: none;
     border-radius: 10px;
-    box-shadow: 1px 1px 1px 1px #f3f3f3;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px #f3f3f3;
     width: 120px;
     margin: 5px;
     color: #0f1111;
+    text-decoration: none;
+    text-align: center;
 }
 
 .button-edit:hover{
     background-color: #f3f3f3;
-    box-shadow: 0.5px 0.5px 0.5px 0.5px #f3f3f3;
+    box-shadow: 1px 1px 1px 1px #f3f3f3;
 }
 
 
