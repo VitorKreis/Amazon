@@ -34,7 +34,8 @@ localStorageExpire();
  */
 
 export function setLocalStorege(chave, valor, minutos) {
-  const expiram = new Date().getTime() + (60000 * minutos);
+  // eslint-disable-next-line no-var
+  var expiram = new Date().getTime() + (60000 * minutos);
 
   localStorage.setItem(chave, JSON.stringify({
     value: valor,

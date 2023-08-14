@@ -8,7 +8,6 @@ import ProjectCard from '../layout/ProductCard';
 
 function Home() {
   const [products, setProducts] = useState([]);
-
   useEffect(() => {
     axios.get('http://localhost:3110/products').then(({ data }) => setProducts(data));
   }, []);

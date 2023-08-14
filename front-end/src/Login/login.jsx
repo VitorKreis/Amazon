@@ -41,12 +41,11 @@ function Login() {
     const user = { email, password };
     setlogin(JSON.stringify(user));
 
-    setLocalStorege('login', login, 1);
-
     try {
       const res = await axios.post('http://localhost:3110/login', user);
       Settoken(res.data);
-      setLocalStorege('token', token, 1);
+      localStorage.setItem('token', token);
+      setLocalStorege('login', login, 1);
     } catch (err) {
       if (err.response.data) return setErro(err.response.data);
     }

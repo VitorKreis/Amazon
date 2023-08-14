@@ -1,21 +1,21 @@
 import { useState } from 'react';
 
-import { Navigate } from 'react-router';
+import { useNavigate } from 'react-router';
 
 function NameForms() {
   const [name, setName] = useState();
+  const navigate = useNavigate;
   function handleForms(e) {
     e.preventDefault();
-    if (name) {
-      const user = JSON.parse(localStorage.getItem('user'));
-      user.name = name;
-      localStorage.setItem('user', user);
-    } else {
-      console.log(name);
-    }
-
-    return <Navigate to="\You" replace />;
+    localStorage.setItem('user', name);
   }
+
+  function handleClick() {
+    if (localStorage.getItem('user')) {
+      navigate('/You');
+    }
+  }
+
   return (
         <form onSubmit={handleForms}>
             <h1>Alterar seu nome</h1>
@@ -33,7 +33,7 @@ function NameForms() {
                         <input onChange={(e) => setName(e.target.value)} type="text" />
                     </label>
                 </div>
-                <button type="submit">Salvar Alteração</button>
+                <button onClick={handleClick} type="submit">Salvar Alteração</button>
             </div>
         </form>
   );
