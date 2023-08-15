@@ -5,15 +5,14 @@ import { getLocalStorage } from '../LocalStorage';
 
 function Account() {
   const login = JSON.parse(getLocalStorage('login'));
-  const user = JSON.parse(localStorage.getItem('user'));
-  console.log(localStorage.getItem('login'));
+  const user = localStorage.getItem('user');
   return (
         <div className="container">
             {!getLocalStorage('login') && (<Navigate to="/" replace />)}
             <ul className="list-group">
                 <li className="list-group-item">
                     <h1>Nome:</h1>
-                    {user ? <p>{user.name}</p> : <p>User</p> }
+                    {user ? <p>{user}</p> : <p>user</p>}
                     <Link to="/editName" className="button-edit" type="button">Editar</Link>
                 </li>
                 <li className="list-group-item">
