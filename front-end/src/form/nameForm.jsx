@@ -1,20 +1,13 @@
 import './nameForm.css';
 import { useState } from 'react';
-import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
 
 function NameForms() {
   const [name, setName] = useState('');
-  const navigate = useNavigate;
   // eslint-disable-next-line consistent-return
   const handleForms = (e) => {
     e.preventDefault();
     localStorage.setItem('user', name);
-    if (localStorage.getItem('user')) {
-      console.log('funcionou');
-      navigate('/You');
-    } else {
-      console.log('Precisa preencher o nome ');
-    }
   };
   return (
         <div className="container">
@@ -34,7 +27,7 @@ function NameForms() {
                             <input onChange={(e) => setName(e.target.value)} type="text" />
                         </label>
                     </div>
-                    <button type="submit">Salvar Alteração</button>
+                    {localStorage.getItem('User') ? <Link to="/">Salvar Alteraçao</Link> : <button type="button">Salvar Alteraçao</button>}
                 </div>
             </form>
         </div>

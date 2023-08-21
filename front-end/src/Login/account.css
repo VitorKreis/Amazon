@@ -13,7 +13,7 @@
 .list-group-item{
     display: flex;
     padding: 10px;
-    justify-content: space-between;
+    justify-content:space-between;
     border: 1px solid #d5d9d9;
 }
 
@@ -26,18 +26,15 @@
 
 .list-group-item p{
     position: fixed;
-    align-self: start;
+    align-self: flex-start;
     font-size: 13px;
-    margin: 16px 5px 0 0px;
+    margin: 30px 0 0 20px;
     color:#333333;
 }
 
 .button-logout{
     display: inline;
     position: relative;
-    align-self: center;
-    justify-self: center;
-    text-align: center;
     background-color: #ffffff;
     border: none;
     border-radius: 10px;
@@ -48,7 +45,7 @@
 
 
 .button-edit{
-    align-self: flex-end;
+    align-self: center;
     background-color: #ffffff;
     border: none;
     border-radius: 10px;

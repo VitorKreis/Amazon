@@ -4,15 +4,14 @@ import axios from 'axios';
 import validator from 'validator';
 
 import './login.css';
-import { setLocalStorege } from '../LocalStorage';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [erro, setErro] = useState();
   // eslint-disable-next-line no-unused-vars
-  const [token, Settoken] = useState([]);
-  const [login, setlogin] = useState();
+  const [token, Settoken] = useState('');
+  const [login, setlogin] = useState('');
 
   function verifyEmail(e) {
     setEmail(e.target.value);
@@ -43,9 +42,9 @@ function Login() {
 
     try {
       const res = await axios.post('http://localhost:3110/login', user);
-      Settoken(res.data);
+      Settoken(JSON.stringify(res.data));
       localStorage.setItem('token', token);
-      setLocalStorege('login', login, 1);
+      localStorage.setItem('login', login);
     } catch (err) {
       if (err.response.data) return setErro(err.response.data);
     }
