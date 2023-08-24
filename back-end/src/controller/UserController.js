@@ -16,10 +16,6 @@ class UserController {
     try {
       const { id } = req;
 
-      if (!id) {
-        return res.status(400).send('Please do login in your account');
-      }
-
       const user = await User.findByPk(id);
       if (!user) {
         return res.status(400).send('User does not exist please verify');
