@@ -1,17 +1,17 @@
 import { useState } from 'react';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import validator from 'validator';
 
 import './login.css';
 
 function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [erro, setErro] = useState();
   // eslint-disable-next-line no-unused-vars
   const [token, Settoken] = useState('');
-  const [login, setlogin] = useState('');
 
   function verifyEmail(e) {
     setEmail(e.target.value);
@@ -38,13 +38,13 @@ function Login() {
   async function handleSubmit(e) {
     e.preventDefault();
     const user = { email, password };
-    setlogin(JSON.stringify(user));
 
     try {
-      const res = await axios.post('http://localhost:3110/login', user);
-      Settoken(JSON.stringify(res.data));
+      await axios.post('http://localhost:3110/login', user).then((res) => Settoken(JSON.stringify(res.data)));
       localStorage.setItem('token', token);
-      localStorage.setItem('login', login);
+      if (localStorage.getItem('token')) {
+        navigate('/You');
+      }
     } catch (err) {
       if (err.response.data) return setErro(err.response.data);
     }
@@ -54,9 +54,6 @@ function Login() {
     <>
     <div className="login">
         <form className="card" onSubmit={handleSubmit}>
-            <div>
-                {localStorage.getItem('token') && (<Navigate to="/" replace />)}
-            </div>
             <h1>Fazer Login</h1>
             { erro ? <span className="error">{erro}</span> : <p />}
             <div>

@@ -8,29 +8,38 @@
     width: 55%;
     margin: 50px 0px 0px 0px;
     box-shadow: 0.5px 0.5px 0.5px#d5d9d9;
+    
 }
 
 .list-group-item{
     display: flex;
-    padding: 10px;
     justify-content:space-between;
     border: 1px solid #d5d9d9;
+}
+
+.list-group-item button{
+    position: relative;
+    justify-self: center;
+    align-self: center;
+    margin: auto;
+    padding: auto;
 }
 
 .list-group-item h1{
     font-size: 15px;
     font-weight: bold;
-    color:#0f1111;
-    margin-bottom: 10px;
+    color:#0f1111
 }
 
 .list-group-item p{
-    position: fixed;
-    align-self: flex-start;
+    position: relative;
+    justify-self: center;
+    align-self: center;
+    margin: auto;
     font-size: 13px;
-    margin: 30px 0 0 20px;
     color:#333333;
 }
+
 
 .button-logout{
     display: inline;
@@ -41,8 +50,13 @@
     box-shadow: 1.5px 1.5px 1.5px 1.5px #f3f3f3;
     width: 115px;
     margin: 10px;
+    transition: 0.3s;
 }
 
+.button-logout:hover{
+    background-color: #ff0033;
+    box-shadow: 1px 1px 1px 1px #ff0033;
+}
 
 .button-edit{
     align-self: center;

@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/jsx-props-no-spreading */
 import './home.css';

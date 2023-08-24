@@ -1,27 +1,37 @@
 import './account.css';
-
-import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Account() {
-  const login = JSON.parse(localStorage.getItem('login'));
-  const user = localStorage.getItem('user');
+  const [User, setUser] = useState();
+  const navigate = useNavigate();
+  const { token } = JSON.parse(localStorage.getItem('token'));
+  if (!token) {
+    console.log('token nao existe');
+    navigate('/Login');
+  }
+  useEffect(() => {
+    axios.get('http://localhost:3110/users/user', {
+      headers: {
+        Authorization: `Basic ${token}`,
+      },
+    }).then((res) => {
+      setUser(res.data);
+      localStorage.setItem('user', User);
+    })
+      .catch((error) => {
+        console.log(error);
+        navigate('/Login');
+      });
+  }, []);
   return (
         <div className="container">
             <ul className="list-group">
                 <li className="list-group-item">
-                    <h1>Nome:</h1>
-                    {user ? <p>{user}</p> : <p>User</p>}
-                    <Link to="/editName" className="button-edit" type="button">Editar</Link>
-                </li>
-                <li className="list-group-item">
                     <h1>E-mail:</h1>
-                    <p>{login.email}</p>
+                    <p>{User?.email}</p>
                     <Link to="/editEmail" className="button-edit" type="button">Editar</Link>
-                </li>
-                <li className="list-group-item">
-                    <h1>Numero de celular:</h1>
-                    <p>41 000000000</p>
-                    <button className="button-edit" type="button">Editar</button>
                 </li>
                 <li className="list-group-item">
                     <h1>Password:</h1>
@@ -32,6 +42,7 @@ function Account() {
                     <button className="button-logout" type="button">Logout</button>
                 </li>
             </ul>
+
         </div>
   );
 }
