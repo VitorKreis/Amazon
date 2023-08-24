@@ -6,7 +6,7 @@ const router = Router();
 
 router.get('/', User.index);
 
-router.get('/', User.show);
+router.get('/user', userRequired, User.show);
 
 router.post('/', User.store);
 
