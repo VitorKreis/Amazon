@@ -6,9 +6,9 @@ const router = Router();
 
 router.get('/', User.index);
 
-router.get('/', userRequired, User.show);
-
 router.post('/', User.store);
+
+router.get('/user', userRequired, User.show);
 
 router.put('/', userRequired, User.update);
 

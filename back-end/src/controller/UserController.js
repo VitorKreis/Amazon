@@ -15,6 +15,11 @@ class UserController {
   async show(req, res) {
     try {
       const { id } = req;
+      console.log(id);
+
+      if (!id) {
+        return res.status(401).send('Please make login in your account!');
+      }
 
       const user = await User.findByPk(id);
       if (!user) {
