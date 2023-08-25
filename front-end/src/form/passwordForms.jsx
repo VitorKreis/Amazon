@@ -1,8 +1,10 @@
+import './passwordForm.css';
+
 function passwordForms() {
   return (
-        <form>
-            <h1>Aleterar sua Senha</h1>
+        <form className="form">
             <div className="card">
+            <h1>Alterar sua Senha</h1>
                 <div className="input">
                     <label htmlFor="oldPassword">
                         Senha atual:

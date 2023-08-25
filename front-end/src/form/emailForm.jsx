@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import isEmail from 'validator/lib/isEmail';
+import './emailForm.css';
 
 function nameForms() {
   const [email, setEmail] = useState('');
@@ -11,25 +12,22 @@ function nameForms() {
     if (!isEmail(email)) {
       console.log('Nao é um email');
     }
+    console.log(email);
     event.preventDefault();
-    axios.put(
-      'http://localhost:3110/users/',
-      {
-        email,
+    axios.put('http://localhost:3110/users', email, {
+      headers: {
+        Authorization: `Basic ${token}`,
       },
-      {
-        auth: `Bearer ${token}`,
-      },
-    )
+    })
       .then((res) => {
         console.log(res.data);
       })
       .catch((e) => {
-        console.error(e.response.data.errors);
+        console.error(e);
       });
   }
   return (
-        <form>
+        <form onSubmit={handleSubmit} className="form">
             <div className="card">
                 <h1>Alterar o seu endereço de e-mail</h1>
                 <div className="text">
@@ -40,10 +38,10 @@ function nameForms() {
                 <div className="card-input">
                     <label htmlFor="input">
                         Novo endereço de e-mail:
-                            <input type="email" onChange={(event) => setEmail(event.target.value)} />
+                            <input required type="email" onChange={(event) => setEmail(event.target.value)} />
                     </label>
                 </div>
-                <button onClick={handleSubmit} type="submit">Salvar Alteração</button>
+                <button type="submit">Salvar Alteração</button>
             </div>
         </form>
   );
