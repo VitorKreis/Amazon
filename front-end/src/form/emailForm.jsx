@@ -2,25 +2,29 @@ import { useState } from 'react';
 import axios from 'axios';
 import isEmail from 'validator/lib/isEmail';
 import './emailForm.css';
+import { useNavigate } from 'react-router';
 
 function nameForms() {
   const [email, setEmail] = useState('');
   // const [error, setError] = useState();
   const { token } = JSON.parse(localStorage.getItem('token'));
+  const navigate = useNavigate();
 
   function handleSubmit(event) {
+    event.preventDefault();
+
     if (!isEmail(email)) {
       console.log('Nao é um email');
     }
-    console.log(email);
-    event.preventDefault();
-    axios.put('http://localhost:3110/users', email, {
+
+    axios.put('http://localhost:3110/users', { email }, {
       headers: {
-        Authorization: `Basic ${token}`,
+        Authorization: `Bearer ${token}`,
       },
     })
       .then((res) => {
-        console.log(res.data);
+        console.log(res);
+        navigate('/login');
       })
       .catch((e) => {
         console.error(e);

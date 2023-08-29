@@ -9,7 +9,7 @@ function Account() {
 
   if (!localStorage.getItem('token')) {
     console.log('token nao existe');
-    navigate('/Login');
+    return navigate('/Login');
   }
 
   try {
@@ -25,7 +25,7 @@ function Account() {
       })
         .catch((error) => {
           console.log(error);
-          navigate('/Login');
+          return navigate('/Login');
         });
     }, []);
   } catch (error) {
