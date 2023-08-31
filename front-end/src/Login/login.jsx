@@ -34,7 +34,8 @@ function Login() {
     const login = JSON.stringify(user);
     localStorage.setItem('login', login);
     try {
-      await axios.post('http://localhost:3110/login', user).then((res) => Settoken(JSON.stringify(res.data)));
+      const response = await axios.post('http://localhost:3110/login', user);
+      Settoken(JSON.stringify(response.data));
       localStorage.setItem('token', token);
       if (localStorage.getItem('token')) {
         navigate('/You');

@@ -1,49 +1,42 @@
-import './passwordForm.css';
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Message from '../layout/message';
+import './passwordForm.css';
 
 function passwordForms() {
+  const [Oldpassword, setOldPassword] = useState();
   const [password, setPassword] = useState();
-  const [Newpassword, setNewPassword] = useState();
-  const [RepNewpassword, setRepNewPassword] = useState();
   const { token } = JSON.parse(localStorage.getItem('token'));
   const login = JSON.parse(localStorage.getItem('login'));
   const [message, setMessage] = useState();
   const [type, setType] = useState();
   const navigate = useNavigate();
-
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(login);
-    if (login.password !== password) {
+
+    if (login.password !== Oldpassword) {
       setMessage('Please make sure your old password is correct.');
       setType('error');
       return;
     }
-    if (Newpassword !== RepNewpassword) {
-      setMessage('Please make sure your put same passwords');
+    if (password.length < 5) {
+      setMessage('Password must be 6 characters long');
       setType('error');
       return;
     }
 
-    if (!Newpassword.length > 5) {
-      setMessage('Password must be 6 characters long');
-      setType('error');
-    }
-
-    axios.put('http://localhost:3110/users', { Newpassword }, {
+    axios.put('http://localhost:3110/users', { password }, {
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Basic ${token}`,
       },
     })
-      .then((res) => {
-        console.log(res);
+      .then(() => {
         navigate('/login');
       })
-      .catch((error) => {
-        console.error(error);
+      .catch(() => {
+        setMessage('Please make sure you password is valid');
+        setType('error');
       });
   }
   return (
@@ -51,18 +44,23 @@ function passwordForms() {
             <div className="card">
             <h1>Alterar sua Senha</h1>
             {Message && <Message msg={message} type={type} />}
+            <div className="text">
+                    <p>
+                    Please make to sure you remember your password, because you have to make login again for security
+                    </p>
+            </div>
                 <div className="input">
                     <label htmlFor="oldPassword">
                         Senha atual:
-                            <input type="password" onChange={(e) => setPassword(e.target.value)} />
+                            <input type="password" onChange={(e) => setOldPassword(e.target.value)} />
                     </label>
                     <label htmlFor="newPassword">
                         Nova Senha:
-                            <input type="password" onChange={(e) => setNewPassword(e.target.value)} />
+                            <input type="password" onChange={(e) => setPassword(e.target.value)} />
                     </label>
                     <label htmlFor="repitPassword">
                         Reinsira a nova senha:
-                            <input type="password" onChange={(e) => setRepNewPassword(e.target.value)} />
+                            <input type="password" />
                     </label>
                 </div>
                 <button type="submit">Salvar Alteração</button>
