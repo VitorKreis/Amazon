@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Layout
-import Narbar from './layout/navbar';
+import Navbar from './layout/navbar';
 // Pages
 import Home from './pages/home';
 import Login from './Login/login';
@@ -14,7 +14,7 @@ import PasswordForms from './form/passwordForms';
 function App() {
   return (
     <Router>
-      <Narbar />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

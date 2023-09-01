@@ -11,12 +11,6 @@ function Navbar() {
     location.reload();
   };
 
-  const handleLogout = () => {
-    localStorage.clear();
-    // eslint-disable-next-line no-restricted-globals
-    location.reload();
-  };
-
   return (
     <div className="Container">
       <nav className="nav navbar">
@@ -29,7 +23,6 @@ function Navbar() {
               <li><p className="dropdown-item">List</p></li>
               <li><Link to="/about" className="dropdown-item">About</Link></li>
               {localStorage.getItem('token') ? <li><Link className="dropdown-item" to="/You">You</Link></li> : <li><Link className="dropdown-item" to="/login">Login</Link></li>}
-              <li><button className="dropdown-item" type="button" onClick={handleLogout}>Logout</button></li>
             </ul>
           </div>
           <li className="item">

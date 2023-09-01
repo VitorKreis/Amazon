@@ -2,7 +2,8 @@ import { useState } from 'react';
 import axios from 'axios';
 import isEmail from 'validator/lib/isEmail';
 import './emailForm.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import { BsArrowLeftCircle } from 'react-icons/bs';
 import Message from '../layout/message';
 
 function nameForms() {
@@ -36,11 +37,12 @@ function nameForms() {
   return (
         <form onSubmit={handleSubmit} className="form">
             <div className="card">
+            <Link className="icon-prev" to="/You"><BsArrowLeftCircle /></Link>
                 <h1>Alterar o seu endereço de e-mail</h1>
                 {Message && <Message msg={message} type={type} />}
                 <div className="text">
                     <p>
-                    Digite o novo endereço de e-mail que você deseja associar à sua conta abaixo,
+                    Enter the new email address you wish to associate with your account below,
                     Please make to sure you remember your password, because you have to make login again for security
                     </p>
                 </div>

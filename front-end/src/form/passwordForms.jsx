@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import { BsArrowLeftCircle } from 'react-icons/bs';
 import Message from '../layout/message';
 import './passwordForm.css';
 
@@ -42,6 +43,7 @@ function passwordForms() {
   return (
         <form onSubmit={handleSubmit} className="form">
             <div className="card">
+            <Link className="icon-prev" to="/You"><BsArrowLeftCircle /></Link>
             <h1>Alterar sua Senha</h1>
             {Message && <Message msg={message} type={type} />}
             <div className="text">
@@ -49,7 +51,7 @@ function passwordForms() {
                     Please make to sure you remember your password, because you have to make login again for security
                     </p>
             </div>
-                <div className="input">
+                <div className="inputs">
                     <label htmlFor="oldPassword">
                         Senha atual:
                             <input type="password" onChange={(e) => setOldPassword(e.target.value)} />

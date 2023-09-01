@@ -72,8 +72,8 @@
 }
 
 .button-edit:hover{
-    background-color: #f3f3f3;
-    box-shadow: 1px 1px 1px 1px #f3f3f3;
+    background-color: #FEBD69;  
+    box-shadow: 0.2px 0.2px 0.2px 0.2px #f3f3f3;
 }
 
 
