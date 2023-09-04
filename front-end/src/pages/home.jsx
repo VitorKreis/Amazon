@@ -15,7 +15,7 @@ function Home() {
         <section className="section">
             <div className="card-section">
             {products.map((product) => (
-                <ProjectCard key={product.id} name={product.name} price={product.price} img={product.Pictures} />
+                <ProjectCard key={product.id} name={product.name} price={product.price} img={product.Pictures} id={product.id} />
             ))}
             </div>
         </section>

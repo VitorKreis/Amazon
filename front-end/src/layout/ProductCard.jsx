@@ -4,6 +4,8 @@
 import { useState } from 'react';
 import './ProductCard.css';
 
+import { Link } from 'react-router-dom';
+
 function ProjectCard({
   id, name, price, img,
 }) {
@@ -14,7 +16,7 @@ function ProjectCard({
                 // eslint-disable-next-line import/no-dynamic-require, global-require
                 <img className="card-img-top" src={require(`../uploads/${picture.filename}`)} alt={picture.originalname} />
             ))}
-        <div className="card-body">
+        <Link to={`/product/${id}`} className="card-body">
           <p>
             <span>{name}</span>
           </p>
@@ -22,7 +24,7 @@ function ProjectCard({
 R$
 <span>{price}</span>
           </p>
-        </div>
+        </Link>
             </div>
         </div>
   );

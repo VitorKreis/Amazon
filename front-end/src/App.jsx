@@ -10,6 +10,7 @@ import About from './pages/about';
 import Account from './Login/account';
 import EmailForms from './form/emailForm';
 import PasswordForms from './form/passwordForms';
+import Product from './pages/Product';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/You" element={<Account />} />
         <Route path="/editEmail" element={<EmailForms />} />
         <Route path="/editPassword" element={<PasswordForms />} />
+       <Route path="/Product/:id" element={<Product />} />
       </Routes>
     </Router>
   );
