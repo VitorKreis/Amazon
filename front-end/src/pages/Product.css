@@ -1,0 +1,77 @@
+
+
+.container{
+    display: flex;
+    position: relative;
+    margin: auto;
+    padding: auto;
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 450px ;
+    box-shadow: inset;
+    border: none;
+    position: relative;
+}
+
+
+.card .name{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+.card .description{
+    font-size: 12px;
+    font-weight: 200;
+    color: grey;
+    padding: auto;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.buttons .btn-add{
+    margin: 10px;
+    width: 140%;
+    align-self: center;
+}
+
+.buttons .btn-buy{
+    margin: 10px;
+    width: 140%;
+    align-self: center;
+}
+
+
+.card-img{
+    display: flex;
+    align-self: center;
+    text-align: left;
+    object-fit: contain;
+    float: left;
+    padding: auto;
+    box-shadow: 1px 1px 1px 1px#f8fbfe;
+}
+
+
+.imagen{
+    justify-self: left;
+    text-align: left;
+    object-fit: contain;
+    width: auto;
+    height: auto;
+    max-width: 500px;
+    max-height: 500px;
+    margin: auto;
+    padding: auto;
+   
+}

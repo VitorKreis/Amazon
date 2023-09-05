@@ -44,6 +44,8 @@
     margin: auto;
     padding: 1px;
     justify-content: space-around;
+    text-decoration: none;
+    position: relative;
 }
 
 .card-body span, p{
