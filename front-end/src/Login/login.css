@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;
     position: relative;
 }
 
@@ -12,11 +11,9 @@
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    width: 365px;
-    margin: 50px 2px;
-    padding: 19px;
     border: 1px solid #e7e7e7;
     text-align: center;
+    width: 100%;
 }
 
 .card h1{
@@ -29,17 +26,14 @@
     font-size: 13px;
     margin: 1px;
     padding: 1px;
-    align-items: center;
+    text-align: center;
     color:#111111;
 }
 
 .card-text{
     border-radius: 5px;
-    padding: 5px;
     font-size: 15px;
-    margin: 13px 1px 0px;
-    width: 300px;
-    height: 28px;
+    margin: auto;
     box-shadow: 1px 1px 1px 1px #c5c9c9;
 }
 

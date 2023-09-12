@@ -4,7 +4,7 @@ import isEmail from 'validator/lib/isEmail';
 import './emailForm.css';
 import { useNavigate, Link } from 'react-router-dom';
 import { BsArrowLeftCircle } from 'react-icons/bs';
-import Message from '../layout/message';
+import Message from '../layout/Message';
 
 function nameForms() {
   const [email, setEmail] = useState('');

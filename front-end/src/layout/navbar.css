@@ -1,64 +1,51 @@
 
 .container{
     display:flex;
-    width: 100%;
     position: relative;
 }
 
 
 .nav{
     display: flex;
-    width: 100%;
+    position: relative;
+    flex-direction: row;
     background-color: #232F3E;
     box-shadow: 6px 6px 6px #A8A8B3;
 }
 
 .list{
     display: flex;
+    justify-content: center;
     float: right;
-    list-style: none;
-    margin: 0.2px;
     align-items: center;
-    padding: 20px;
+    list-style: none;
+    margin: 0.1px;
     text-decoration: none;
+    position: relative;
 }
 
 .dropdown-menu a{
     text-decoration: none;
-    color: #000;
-    
-}
-
-.dropdown-item{
     display: flex;
+    justify-content: flex-start;
+    color: #000;
     padding: 10px;
     font-size: 16px;
-    justify-content: flex-start;
-    border-radius: 20px;
 }
 
 
 .icon {
     display: flex;
     justify-content: flex-start;
-    box-sizing: border-box;
+    position: relative;
     font-size: 45px;
     font-weight: lighter;
-    width: 50px;
-    height: 50px;
+    width: auto;
+    height: auto;
     color: #ffffff;
     margin: 3px 23px;
 }
 
-.search{
-    justify-content: center;
-    text-align: start;
-    border: none;
-    border-radius: 10px;
-    margin: 1em;
-    height: 33px;
-    padding: 10px 120px 10px 6px;
-}
 
 .icon-button{
     background-color: #232f3e;
@@ -87,20 +74,19 @@
     display: flex;
     justify-content: flex-end;
     position: relative;
-    font-size: 40px;
+    
     color:#ffffff;
     font-weight: lighter;
-    margin: 1px 25px;
     transition: 0.3s;
-}
-
-.button-cart{
     border-color:  #232f3e;
 }
 
-
-.button-cart:hover{
-    border: 0.5px solid #f8fbfe;
+.icon-cart{
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding: auto;
+    font-size: 28px;
 }
 
 

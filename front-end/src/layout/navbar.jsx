@@ -3,30 +3,24 @@ import { Link } from 'react-router-dom';
 import './navbar.css';
 
 import { SiGtk } from 'react-icons/si';
-import { BsFillCartFill } from 'react-icons/bs';
+import { BsFillCartFill, BsFillPersonFill } from 'react-icons/bs';
 
 function Navbar() {
-  const reloads = () => {
-    // eslint-disable-next-line no-restricted-globals
-    location.reload();
-  };
-
   return (
     <div className="Container">
       <nav className="nav navbar">
-        <button className="icon-button btn btn" onClick={reloads} type="button"><Link className="icon" to="/"><SiGtk /></Link></button>
-            <input className="search" type="text" placeholder="Search" />
+        <button className="icon-button btn btn" type="button"><Link className="icon" to="/"><SiGtk /></Link></button>
         <ul className="list">
           <div className="dropdown">
-            <button id="button" className="btn btn dropdown-toggle" type="button" data-bs-toggle="dropdown">Hello, do login in your account</button>
+            <button id="button" className="btn btn dropdown-toggle" type="button" data-bs-toggle="dropdown"><BsFillPersonFill fontSize={29} /></button>
             <ul className="dropdown-menu">
-              <li><p className="dropdown-item">List</p></li>
+              <li><Link to="/Cart" className="dropdown-item">Cart</Link></li>
               <li><Link to="/about" className="dropdown-item">About</Link></li>
               {localStorage.getItem('token') ? <li><Link className="dropdown-item" to="/You">You</Link></li> : <li><Link className="dropdown-item" to="/login">Login</Link></li>}
             </ul>
           </div>
           <li className="item">
-            <button type="button" className="button-cart btn btn-sm"><BsFillCartFill className="cart" /></button>
+            <Link to="/Cart" className="cart"><BsFillCartFill className="icon-cart" /></Link>
           </li>
         </ul>
       </nav>

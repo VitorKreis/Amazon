@@ -1,20 +1,19 @@
-
-
 .container{
     display: flex;
     position: relative;
     margin: auto;
     padding: auto;
+    width: 100%;
 }
 
 
 .card{
     display: flex;
     flex-direction: column;
-    width: 400px;
-    height: 450px ;
-    box-shadow: inset;
-    border: none;
+    width: auto;
+    height: auto;
+    padding: auto;
+    text-align: justify;
     position: relative;
 }
 
@@ -22,6 +21,9 @@
 .card .name{
     font-size: 20px;
     font-weight: 600;
+    padding: 1px;
+    margin: 5px;
+    position: relative;
 }
 
 
@@ -31,47 +33,65 @@
     font-weight: 200;
     color: grey;
     padding: auto;
+    position: relative;
+}
+
+.card span {
+    color: #000000;
+    text-align: justify;
+    padding: 1px;
+    margin: 4px;
+    position: relative;
 }
 
 .buttons{
     display: flex;
     flex-direction: column;
     margin: 10px;
+    position: relative;
 }
 
 .buttons .btn-add{
+    display: inline;
     margin: 10px;
-    width: 140%;
+    width: 200px;
     align-self: center;
+    position: relative;
 }
 
 .buttons .btn-buy{
+    display: inline;
     margin: 10px;
-    width: 140%;
+    width: 200px;
     align-self: center;
+    position: relative;
 }
 
 
 .card-img{
     display: flex;
-    align-self: center;
-    text-align: left;
-    object-fit: contain;
-    float: left;
+    align-content: center;
     padding: auto;
-    box-shadow: 1px 1px 1px 1px#f8fbfe;
+    margin: auto;
+    position: relative;
 }
 
 
 .imagen{
-    justify-self: left;
-    text-align: left;
-    object-fit: contain;
-    width: auto;
-    height: auto;
-    max-width: 500px;
-    max-height: 500px;
-    margin: auto;
-    padding: auto;
-   
+    display: flex;
+    position: relative;
+    object-fit: fill;
+    max-width: 400px;
+    max-height: 350px;   
+}
+
+
+.icon-prev{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    width: 70px;
 }

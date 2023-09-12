@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import isEmail from 'validator/lib/isEmail';
-import Message from '../layout/message';
+import Message from '../layout/Message';
 import './login.css';
 
 function Login() {

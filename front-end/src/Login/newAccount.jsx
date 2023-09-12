@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router';
 import { isEmail } from 'validator';
 
 import './newAccount.css';
-import Message from '../layout/message';
+import Message from '../layout/Message';
 
-function newAccount() {
+function NewAccount() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [user, setUser] = useState();
@@ -55,4 +55,4 @@ function newAccount() {
   );
 }
 
-export default newAccount;
+export default NewAccount;

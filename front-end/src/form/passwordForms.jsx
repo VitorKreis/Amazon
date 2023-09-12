@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import { BsArrowLeftCircle } from 'react-icons/bs';
-import Message from '../layout/message';
+import Message from '../layout/Message';
 import './passwordForm.css';
 
 function passwordForms() {
