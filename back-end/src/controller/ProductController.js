@@ -30,7 +30,7 @@ class ProductController {
         attributes: ['id', 'name', 'description', 'price'],
         include: {
           model: Picture,
-          attributes: ['id', 'originalname'],
+          attributes: ['id', 'originalname', 'filename'],
         },
       });
       if (!products) {
