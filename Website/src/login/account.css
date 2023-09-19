@@ -1,0 +1,79 @@
+.container{
+    display: flex;
+    position: relative;
+}
+
+.list-group{
+    display: flex;
+    width: 55%;
+    margin: 50px 0px 0px 0px;
+    box-shadow: 0.5px 0.5px 0.5px#d5d9d9;
+    
+}
+
+.list-group-item{
+    display: flex;
+    justify-content:space-between;
+    border: 1px solid #d5d9d9;
+}
+
+.list-group-item button{
+    position: relative;
+    justify-self: center;
+    align-self: center;
+    margin: auto;
+    padding: auto;
+}
+
+.list-group-item h1{
+    font-size: 15px;
+    font-weight: bold;
+    color:#0f1111
+}
+
+.list-group-item p{
+    position: relative;
+    justify-self: center;
+    align-self: center;
+    margin: auto;
+    font-size: 13px;
+    color:#333333;
+}
+
+
+.button-logout{
+    display: inline;
+    position: relative;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px #f3f3f3;
+    width: 115px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.button-logout:hover{
+    background-color: #ff0033;
+    box-shadow: 1px 1px 1px 1px #ff0033;
+}
+
+.button-edit{
+    align-self: center;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px #f3f3f3;
+    width: 120px;
+    margin: 5px;
+    color: #0f1111;
+    text-decoration: none;
+    text-align: center;
+}
+
+.button-edit:hover{
+    background-color: #FEBD69;  
+    box-shadow: 0.2px 0.2px 0.2px 0.2px #f3f3f3;
+}
+
+

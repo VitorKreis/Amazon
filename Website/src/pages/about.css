@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card {
+    display: flex;
+    justify-self: baseline;
+    padding: 5px;
+    margin: 40px;
+}
+
+.card span{
+    font-size: 17px;
+    color:#000;
+}
+
+.card a {
+    color: #232F3E;
+    font-size: 35px;
+    padding: 5px;
+    display: flex;
+}
+
+.card a:hover{
+    color: #000;
+}
+
+
+.icons{
+    display: flex;
+    align-items: center;
+    margin: 2px;
+}
