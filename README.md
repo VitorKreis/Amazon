@@ -1,6 +1,7 @@
 # Amazon
 
-Este é um e-commerce aonde tentei copiar a amazon, neste projeto desnvolvido muito das minhas abilidades back-end e front.
+Neste projeto desenvolvi um ecommerce usando as tecnologias Node.js, React, Sequelize e MYSQL. O resultado foi uma
+plataforma de visualização e venda de produtos
 
 
 ## Status
